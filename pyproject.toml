@@ -1,0 +1,34 @@
+[project]
+name = "virtual"
+version = "0.0.0"
+classifiers = ["Private :: Do Not Upload"]
+requires-python = ">=3.10"
+
+[tool.uv]
+torch-backend = "auto"
+python-preference = "only-managed"
+
+[tool.uv.workspace]
+members = ["meta/*"]
+
+[tool.uv.sources]
+dearlog    = {workspace=true}
+depthflow  = {workspace=true}
+hook       = {workspace=true}
+pyaket     = {workspace=true}
+shaderflow = {workspace=true}
+typenaut   = {workspace=true}
+
+[tool.ruff.format]
+exclude = ["*"]
+
+[tool.ruff.lint]
+ignore = [
+    "E402", # Late/runtime imports are ok for torch
+    "E701", # Rarely, this looks better than new line
+    "E731", # Lambdas can be more readable at times
+    "E741", # Don't tell the electrical engineers
+    "F401", # Init files may re-export 'unused' stuff..
+    "F403", # Star imports can be useful at times
+    "F541", # Useful in multi-line f-strings..
+]

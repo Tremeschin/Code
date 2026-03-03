@@ -1,0 +1,7 @@
+.nomedia
+.stfolder
+.venv
+*.lock
+dist
+release
+target
