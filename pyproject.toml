@@ -7,6 +7,7 @@ requires-python = ">=3.10"
 [tool.uv]
 torch-backend = "auto"
 python-preference = "only-managed"
+python-install-mirror = "https://github.com/astral-sh/python-build-standalone/releases/download"
 
 [tool.uv.workspace]
 members = ["meta/*"]
