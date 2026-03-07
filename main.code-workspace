@@ -1,0 +1,73 @@
+{
+	"folders": [
+		{"name": "BrokenSource", "path": "meta/broken"},
+		{"name": "Personal",     "path": "meta/personal"},
+		{"name": "Private",      "path": "meta/private"},
+		{"name": "Code",         "path": "."},
+	],
+
+	"extensions": {
+		"recommendations": [
+			"charliermarsh.ruff",
+			"fill-labs.dependi",
+			"ms-python.python",
+			"ms-python.vscode-pylance",
+			"myriad-dreamin.tinymist",
+			"pkief.material-icon-theme",
+			"shardulm94.trailing-spaces",
+			"tamasfe.even-better-toml",
+			"usernamehw.errorlens",
+		]
+	},
+
+	"settings": {
+		"files.exclude": {
+			".nomedia":  true,
+			".stfolder": true,
+			"meta":      true,
+		},
+		"material-icon-theme.folders.associations": {
+			".cargo":      "config",
+			".venvs":      "python",
+			"about":       "other",
+			"blog":        "log",
+			"cargo":       "tools",
+			"cloud":       "aws",
+			"community":   "shared",
+			"crates":      "rust",
+			"dearlog":     "tools",
+			"default":     "examples",
+			"depthflow":   "tools",
+			"externals":   "core",
+			"ffmpeg":      "core",
+			"fork":        "less",
+			"fragment":    "shader",
+			"get":         "download",
+			"insiders":    "secure",
+			"meta":        "context",
+			"midis":       "audio",
+			"news":        "log",
+			"overrides":   "other",
+			"papers":      "log",
+			"pianola":     "tools",
+			"profile":     "admin",
+			"pyaket":      "tools",
+			"rust":        "src",
+			"rustbin":     "tools",
+			"scenes":      "core",
+			"shaderflow":  "tools",
+			"soundfonts":  "audio",
+			"spectronote": "tools",
+			"staging":     "temp",
+			"tremeschin":  "home",
+			"turbopipe":   "tools",
+			"typenaut":    "tools",
+			"user":        "home",
+			"vertex":      "shader",
+		},
+		"material-icon-theme.files.associations": {
+			".stignore": "credits"
+		},
+		"mesonbuild.selectRootDir": false,
+	},
+}

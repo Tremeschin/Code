@@ -2,4 +2,5 @@
 **/.cache
 **/.venv
 **/build
+**/open-gpu
 **/target

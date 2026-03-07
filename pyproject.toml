@@ -4,13 +4,19 @@ version = "0.0.0"
 classifiers = ["Private :: Do Not Upload"]
 requires-python = ">=3.10"
 
+[dependency-groups]
+dev = [
+    "zensical",
+]
+
 [tool.uv]
 torch-backend = "auto"
 python-preference = "only-managed"
 python-install-mirror = "https://github.com/astral-sh/python-build-standalone/releases/download"
 
 [tool.uv.workspace]
-members = ["meta/*"]
+members = ["meta/*/*"]
+exclude = ["meta/*/nvibrant"]
 
 [tool.uv.sources]
 dearlog    = {workspace=true}
