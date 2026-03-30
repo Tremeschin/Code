@@ -2,10 +2,10 @@
 name = "virtual"
 version = "0.0.0"
 classifiers = ["Private :: Do Not Upload"]
-requires-python = ">=3.10"
-
-[dependency-groups]
-dev = [
+requires-python = ">=3.11"
+dependencies = [
+    "tuna",
+    "yt-dlp",
     "zensical",
 ]
 
@@ -16,7 +16,6 @@ python-install-mirror = "https://github.com/astral-sh/python-build-standalone/re
 
 [tool.uv.workspace]
 members = ["meta/*/*"]
-exclude = ["meta/*/nvibrant"]
 
 [tool.uv.sources]
 dearlog    = {workspace=true}
@@ -24,6 +23,7 @@ depthflow  = {workspace=true}
 hook       = {workspace=true}
 pyaket     = {workspace=true}
 shaderflow = {workspace=true}
+smartdirs  = {workspace=true}
 typenaut   = {workspace=true}
 
 [tool.ruff.format]
