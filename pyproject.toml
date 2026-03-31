@@ -4,15 +4,22 @@ version = "0.0.0"
 classifiers = ["Private :: Do Not Upload"]
 requires-python = ">=3.11"
 dependencies = [
-    "tuna",
+    "tuna==0.5.11",
     "yt-dlp",
     "zensical",
 ]
 
 [tool.uv]
 torch-backend = "auto"
-python-preference = "only-managed"
+exclude-newer = "7 days"
 python-install-mirror = "https://github.com/astral-sh/python-build-standalone/releases/download"
+python-preference     = "only-managed"
+
+[tool.uv.exclude-newer-package]
+torch       = false
+torchaudio  = false
+torchvision = false
+zensical    = false
 
 [tool.uv.workspace]
 members = ["meta/*/*"]
