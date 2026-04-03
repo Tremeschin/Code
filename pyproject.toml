@@ -4,6 +4,8 @@ version = "0.0.0"
 classifiers = ["Private :: Do Not Upload"]
 requires-python = ">=3.11"
 dependencies = [
+    "hatchling",
+    "maturin",
     "tuna==0.5.11",
     "yt-dlp",
     "zensical",
@@ -13,7 +15,7 @@ dependencies = [
 torch-backend = "auto"
 exclude-newer = "7 days"
 python-install-mirror = "https://github.com/astral-sh/python-build-standalone/releases/download"
-python-preference     = "only-managed"
+python-preference = "only-managed"
 
 [tool.uv.exclude-newer-package]
 torch       = false
@@ -29,9 +31,10 @@ dearlog    = {workspace=true}
 depthflow  = {workspace=true}
 hook       = {workspace=true}
 pyaket     = {workspace=true}
+rustman    = {workspace=true}
 shaderflow = {workspace=true}
 smartdirs  = {workspace=true}
-typenaut   = {workspace=true}
+turbopipe  = {workspace=true}
 
 [tool.ruff.format]
 exclude = ["*"]
@@ -44,5 +47,6 @@ ignore = [
     "E741", # Don't tell the electrical engineers
     "F401", # Init files may re-export 'unused' stuff..
     "F403", # Star imports can be useful at times
+    "F405", # You can find star objects why complain
     "F541", # Useful in multi-line f-strings..
 ]
