@@ -2,8 +2,8 @@
 	"folders": [
 		{"name": "BrokenSource", "path": "meta/broken"},
 		{"name": "Personal",     "path": "meta/personal"},
+		{"name": "Staging",      "path": "meta/staging"},
 		{"name": "Private",      "path": "meta/private"},
-		{"name": "Temp",         "path": "meta/temp"},
 		{"name": "Code",         "path": "."},
 	],
 
@@ -11,7 +11,6 @@
 		"recommendations": [
 			"astral-sh.ty",
 			"charliermarsh.ruff",
-			"fill-labs.dependi",
 			"ms-python.python",
 			"ms-python.vscode-pylance",
 			"myriad-dreamin.tinymist",

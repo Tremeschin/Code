@@ -1,9 +1,12 @@
 [project]
-name = "virtual"
+name = "code"
 version = "0.0.0"
 classifiers = ["Private :: Do Not Upload"]
-requires-python = ">=3.11"
-dependencies = [
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
     "hatchling",
     "maturin",
     "tuna==0.5.11",
@@ -14,7 +17,6 @@ dependencies = [
 [tool.uv]
 torch-backend = "auto"
 exclude-newer = "7 days"
-python-install-mirror = "https://github.com/astral-sh/python-build-standalone/releases/download"
 python-preference = "only-managed"
 
 [tool.uv.exclude-newer-package]
@@ -25,17 +27,19 @@ zensical    = false
 
 [tool.uv.workspace]
 members = ["meta/*/*"]
+exclude = ["**/nvibrant"]
 
 [tool.uv.sources]
 dearlog    = {workspace=true}
 depthflow  = {workspace=true}
 hook       = {workspace=true}
+parsenaut  = {workspace=true}
 pyaket     = {workspace=true}
 rustman    = {workspace=true}
 shaderflow = {workspace=true}
 smartdirs  = {workspace=true}
-turbopipe  = {workspace=true}
 
+# Do Not Touch My Formatting!
 [tool.ruff.format]
 exclude = ["*"]
 
