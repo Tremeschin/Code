@@ -23,6 +23,7 @@ python-preference = "only-managed"
 torch       = false
 torchaudio  = false
 torchvision = false
+triton      = false
 zensical    = false
 
 [tool.uv.workspace]
