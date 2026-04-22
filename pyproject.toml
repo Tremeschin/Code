@@ -18,6 +18,7 @@ dev = [
 torch-backend = "auto"
 exclude-newer = "7 days"
 python-preference = "only-managed"
+exclude-dependencies = ["torch"]
 
 [tool.uv.exclude-newer-package]
 torch       = false

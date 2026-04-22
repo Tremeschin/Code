@@ -1,7 +1,9 @@
-.nomedia
-.stfolder
-.venv
-*.lock
-dist
-release
-target
+# Include on .stignore!
+**/.cache
+**/.nomedia
+**/.stfolder
+**/.venv
+**/*.lock
+**/build
+**/open-gpu
+**/target

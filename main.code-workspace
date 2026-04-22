@@ -1,9 +1,10 @@
 {
 	"folders": [
 		{"name": "BrokenSource", "path": "meta/broken"},
-		{"name": "Personal",     "path": "meta/personal"},
+		{"name": "Tremeschin",   "path": "meta/tremeschin"},
 		{"name": "Staging",      "path": "meta/staging"},
 		{"name": "Private",      "path": "meta/private"},
+		{"name": "Minor",        "path": "meta/minor"},
 		{"name": "Code",         "path": "."},
 	],
 
