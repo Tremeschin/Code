@@ -18,7 +18,6 @@ dev = [
 torch-backend = "auto"
 exclude-newer = "7 days"
 python-preference = "only-managed"
-exclude-dependencies = ["torch"]
 
 [tool.uv.exclude-newer-package]
 torch       = false
@@ -40,6 +39,10 @@ pyaket     = {workspace=true}
 rustman    = {workspace=true}
 shaderflow = {workspace=true}
 smartdirs  = {workspace=true}
+
+[[tool.uv.dependency-metadata]]
+name = "omnivoice"
+requires-dist = []
 
 # Do Not Touch My Formatting!
 [tool.ruff.format]

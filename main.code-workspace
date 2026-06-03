@@ -2,14 +2,16 @@
 	"folders": [
 		{"name": "BrokenSource", "path": "meta/broken"},
 		{"name": "Tremeschin",   "path": "meta/tremeschin"},
-		{"name": "Staging",      "path": "meta/staging"},
 		{"name": "Private",      "path": "meta/private"},
+		{"name": "Staging",      "path": "meta/staging"},
 		{"name": "Minor",        "path": "meta/minor"},
 		{"name": "Code",         "path": "."},
 	],
 
 	"extensions": {
 		"recommendations": [
+
+			// Essential
 			"astral-sh.ty",
 			"charliermarsh.ruff",
 			"ms-python.python",
@@ -19,12 +21,22 @@
 			"shardulm94.trailing-spaces",
 			"tamasfe.even-better-toml",
 			"usernamehw.errorlens",
+
+			// Theming
+			"chadalen.vscode-jetbrains-icon-theme",
+			"fabiospampinato.vscode-monokai-night",
+
+			// Utility
+			"aaron-bond.better-comments",
+			"silesky.toggle-boolean",
+			"slevesque.shader",
+			"stackbreak.comment-divider",
+			"ue.alphabetical-sorter",
 		]
 	},
 
 	"settings": {
-    	"ty.disableLanguageServices": true,
-    	"python.languageServer": "Pylance",
+    	"ty.disableLanguageServices": false,
 		"files.exclude": {
 			"**/.cache": true,
 			"**/site":   true,
