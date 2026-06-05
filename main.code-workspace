@@ -36,7 +36,8 @@
 	},
 
 	"settings": {
-    	"ty.disableLanguageServices": false,
+    	"ty.disableLanguageServices": true,
+		"python.languageServer": "Pylance",
 		"files.exclude": {
 			"**/.cache": true,
 			"**/site":   true,

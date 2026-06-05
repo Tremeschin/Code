@@ -9,15 +9,32 @@ dependencies = []
 dev = [
     "hatchling",
     "maturin",
-    "tuna==0.5.11",
+    "meson",
+    "ninja",
+    "poethepoet",
+    "tuna",
     "yt-dlp",
     "zensical",
 ]
 
 [tool.uv]
-torch-backend = "auto"
+link-mode = "hardlink"
 exclude-newer = "7 days"
 python-preference = "only-managed"
+
+# Fixme: uv sync doesn't use backends
+torch-backend = "auto"
+exclude-dependencies = [
+    "torch",
+    "torchaudio",
+    "torchvision",
+]
+
+[tool.poe.tasks.sync]
+sequence = [
+  {cmd = "uv sync --all-packages --inexact $POE_EXTRA_ARGS"},
+  {cmd = "uv pip install torchvision torchaudio torch"},
+]
 
 [tool.uv.exclude-newer-package]
 torch       = false
@@ -33,7 +50,6 @@ exclude = ["**/nvibrant"]
 [tool.uv.sources]
 dearlog    = {workspace=true}
 depthflow  = {workspace=true}
-hook       = {workspace=true}
 parsenaut  = {workspace=true}
 pyaket     = {workspace=true}
 rustman    = {workspace=true}
@@ -44,7 +60,7 @@ smartdirs  = {workspace=true}
 name = "omnivoice"
 requires-dist = []
 
-# Do Not Touch My Formatting!
+# Get out of my swamp!
 [tool.ruff.format]
 exclude = ["*"]
 
