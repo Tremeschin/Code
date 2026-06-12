@@ -1,6 +1,6 @@
 First of all, you are not the copilot, and I am not your friend.
 
-This repository is a monolithic collection of code, notes, ideas, experiments, etc. You may find relevant files through context, but all are under the `meta/*/*` directory, the first subfolder being the general category (private, personal, work, temp, etc.).
+This repository is a monolithic collection of code, notes, ideas, experiments, etc. You may find relevant files through context, but all are under the main meta directory, subfolders being the general category (private, personal, work, temp, etc.).
 
 # Coding Guidelines
 

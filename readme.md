@@ -1,20 +1,19 @@
-> [!IMPORTANT]
-> This repository is the main development environment for all my professional and personal projects, including libraries, applications, infrastructure and some private components.
+<div align="center">
+  <img src="https://github.com/Tremeschin.png" width="180">
+  <h1>Tremeschin's</h1>
+  <span>📦 Main development workspace 📦</span>
+  <br><br>
+</div>
+
+A monorepo to organize all my professional and personal projects, including libraries, applications, infrastructure and some private components.
+
+_Not intended for public use or contributions, though may contain useful snippets._
 
 ## Setup
 
-> [!NOTE]
-> Submodules are discouraged as their metadata exists on the origin:
-> - Better flexibility to structure and move directories around.
-> - Avoids misuse and issues when renaming or syncing-hell.
+For self reference, in case of memory loss:
 
-Clone the repository and others as needed under `meta/*/*`:
-
-```bash
-$ git clone https://github.com/Tremeschin/Code && cd Code
-$ git clone https://github.com/BrokenSource/Pyaket meta/broken/Pyaket
-$ git clone https://github.com/Tremeschin/nvibrant meta/personal/nvibrant
-...
-```
-
-- **Python**: `uv sync --all-packages`
+- Clone the repository, add others at `code/$area/*` as needed (no submodules!)
+- Always include .gitignore in Syncthing via `#include` macro before installing.
+- For non-nvidia, use `uv run poe sync` until it respects auto torch backend.
+- Open the code-workspace and install recommended extensions.
