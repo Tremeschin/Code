@@ -4,7 +4,7 @@
   <br><br>
 </div>
 
-A monorepo to organize all my professional and personal projects, including libraries, applications, infrastructure and some private components. Mainly powered by uv workspaces and python management.
+A monorepo to organize all my professional and personal projects, including libraries, applications, infrastructure and some private components - mainly powered by uv workspaces and python management.
 
 _Not intended for public use or contributions, though may contain useful snippets._
 

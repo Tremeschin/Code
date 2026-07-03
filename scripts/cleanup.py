@@ -1,6 +1,8 @@
 import shutil
 from pathlib import Path
 
+root = Path.cwd()
+
 # Caches, artifacts
 unwanted: list[str] = [
     "__pycache__",
@@ -10,16 +12,14 @@ unwanted: list[str] = [
     "target",
 ]
 
-for path in Path.cwd().glob("*"):
-    if path.name == ".venv":
-        continue
-    if path.is_file():
-        continue
+def remove(path: Path) -> None:
+    if input(f"Enter to remove ({path}) ") != "":
+        return
+    if path.is_dir():
+        shutil.rmtree(path, ignore_errors=True)
+    else:
+        path.unlink(missing_ok=True)
 
-    for pattern in unwanted:
-        for path in path.rglob(pattern):
-            if input(f"Enter to remove ({path}) ") == "":
-                if path.is_dir():
-                    shutil.rmtree(path, ignore_errors=True)
-                else:
-                    path.unlink(missing_ok=True)
+for matches in list(map(root.rglob, unwanted)):
+    for path in matches:
+        remove(path)

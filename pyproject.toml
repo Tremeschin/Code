@@ -24,11 +24,6 @@ python-preference = "only-managed"
 
 # Fixme: uv sync doesn't use backends
 torch-backend = "auto"
-exclude-dependencies = [
-    "torch",
-    "torchaudio",
-    "torchvision",
-]
 
 [tool.poe.tasks.sync]
 sequence = [
@@ -52,7 +47,6 @@ dearlog    = {workspace=true}
 depthflow  = {workspace=true}
 parsenaut  = {workspace=true}
 pyaket     = {workspace=true}
-rustman    = {workspace=true}
 shaderflow = {workspace=true}
 smartdirs  = {workspace=true}
 

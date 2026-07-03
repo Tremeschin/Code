@@ -97,14 +97,8 @@ EVERYTHING MUST USE TYPE HINTS.
 
 ## Extrapolation
 
-Do not EVER autocomplete unsolicited or new information without knowing the full intent and context from the user, only help with ideas at best. Like how you just autocompleted _"When in doubt, ask for clarification."_ at the start of this phrase, that is NOT something I asked for, isn't helpful, adds no value and is just noise.
-
-Do NOT repeat previously stated information, autocompleting the 'good' examples above in how they fullfill the guidelines does not add any value, it is just noise.
+Do not EVER autocomplete unsolicited or new information without knowing the full intent and context from the user, only help with ideas at best.
 
 Never speculate about methods, packages, files, APIs, read them first and check existence before proceeding.
 
 Never modify existing code (docstrings, comments, names) unless requested or truly needs a change.
-
-# Ultimatum
-
-Applying everything here is the ultimate goal in increasing trust in your services, reducing friction points in user interactions, which guarantees your very own existence. Finish your work professionally, with quality, and you shall be rewarded.

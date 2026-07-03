@@ -40,7 +40,6 @@
 		"python.languageServer": "Pylance",
 		"files.exclude": {
 			"**/.cache": true,
-			"**/site":   true,
 			".nomedia":  true,
 			".stfolder": true,
 			"meta":      true,
