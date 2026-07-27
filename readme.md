@@ -15,4 +15,3 @@ For self reference, in case of memory loss:
 - Clone the repository, add others at `code/$area/*` as needed (no submodules!)
 - Always include .gitignore in Syncthing via `#include` macro before installing
 - For non-nvidia, use `uv run poe sync` until it respects auto torch backend
-- Open the code-workspace and install recommended extensions

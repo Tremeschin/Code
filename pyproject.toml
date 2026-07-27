@@ -12,6 +12,8 @@ dev = [
     "meson",
     "ninja",
     "poethepoet",
+    "pytest-sugar",
+    "pytest",
     "tuna",
     "yt-dlp",
     "zensical",
