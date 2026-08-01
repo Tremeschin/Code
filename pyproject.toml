@@ -34,11 +34,8 @@ sequence = [
 ]
 
 [tool.uv.exclude-newer-package]
-torch       = false
-torchaudio  = false
-torchvision = false
-triton      = false
-zensical    = false
+uv = false
+zensical = false
 
 [tool.uv.workspace]
 members = ["code/*/*"]
@@ -46,11 +43,13 @@ exclude = ["**/nvibrant"]
 
 [tool.uv.sources]
 dearlog    = {workspace=true}
+delusion   = {workspace=true}
 depthflow  = {workspace=true}
 parsenaut  = {workspace=true}
 pyaket     = {workspace=true}
 shaderflow = {workspace=true}
 smartdirs  = {workspace=true}
+turbopipe  = {workspace=true}
 
 [[tool.uv.dependency-metadata]]
 name = "omnivoice"
@@ -82,4 +81,5 @@ ignore = [
     "F403", # Star imports can be useful at times
     "F405", # You can find star objects why complain
     "F541", # Useful in multi-line f-strings..
+    "SIM102", # Nested conditionals can be long
 ]
