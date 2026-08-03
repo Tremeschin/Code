@@ -2,20 +2,16 @@
 name = "code"
 version = "1.0"
 classifiers = ["Private :: Do Not Upload"]
-requires-python = ">=3.12"
+requires-python = ">=3.12" # Global typing
 dependencies = []
 
 [dependency-groups]
 dev = [
     "hatchling",
-    "maturin",
-    "meson",
-    "ninja",
     "poethepoet",
     "pytest-sugar",
     "pytest",
     "tuna",
-    "yt-dlp",
     "zensical",
 ]
 
@@ -38,8 +34,11 @@ uv = false
 zensical = false
 
 [tool.uv.workspace]
-members = ["code/*/*"]
 exclude = ["**/nvibrant"]
+members = [
+    "code/broken/*",
+    "code/tremeschin/*",
+]
 
 [tool.uv.sources]
 dearlog    = {workspace=true}

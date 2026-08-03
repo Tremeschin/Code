@@ -1,8 +1,8 @@
+import functools
 import re
 import subprocess
 import sys
 import tomllib
-from functools import cached_property
 from pathlib import Path
 
 from pydantic import BaseModel
@@ -12,7 +12,7 @@ class Member(BaseModel):
     name: str
     path: Path
 
-    @cached_property
+    @functools.cached_property
     def pyproject(self) -> dict:
         toml = self.path.joinpath("pyproject.toml").read_text()
         return tomllib.loads(toml)
