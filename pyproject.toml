@@ -19,14 +19,17 @@ dev = [
 link-mode = "hardlink"
 exclude-newer = "7 days"
 python-preference = "only-managed"
-
-# Fixme: uv sync doesn't use backends
 torch-backend = "auto"
+exclude-dependencies = [
+    "torch",
+    "torchvision",
+    "torchaudio",
+]
 
 [tool.poe.tasks.sync]
 sequence = [
   {cmd = "uv sync --all-packages --inexact $POE_EXTRA_ARGS"},
-  {cmd = "uv pip install torchvision torchaudio torch"},
+  {cmd = "uv pip install torchvision torchaudio torch --torch-backend=auto --no-config"},
 ]
 
 [tool.uv.exclude-newer-package]
@@ -73,12 +76,15 @@ exclude = ["*"]
 [tool.ruff.lint]
 ignore = [
     "E402", # Late/runtime imports are ok for torch
-    "E701", # Rarely, this looks better than new line
+    "E701", # Sometimes looks better than new line
     "E731", # Lambdas can be more readable at times
     "E741", # Don't tell the electrical engineers
-    "F401", # Init files may re-export 'unused' stuff..
     "F403", # Star imports can be useful at times
     "F405", # You can find star objects why complain
-    "F541", # Useful in multi-line f-strings..
-    "SIM102", # Nested conditionals can be long
+    "F541", # Useful to keep multi-line indentation
+    "SIM102", # Splitting long nested conditionals
 ]
+
+# https://github.com/astral-sh/ruff/issues/15858
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
