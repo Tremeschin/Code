@@ -53,10 +53,6 @@ shaderflow = {workspace=true}
 smartdirs  = {workspace=true}
 turbopipe  = {workspace=true}
 
-[[tool.uv.dependency-metadata]]
-name = "omnivoice"
-requires-dist = []
-
 # Pure virtual package
 [build-system]
 requires = ["hatchling"]
@@ -83,6 +79,7 @@ ignore = [
     "F405", # You can find star objects why complain
     "F541", # Useful to keep multi-line indentation
     "SIM102", # Splitting long nested conditionals
+    "B008", # Namespace bloat for lazylock args
 ]
 
 # https://github.com/astral-sh/ruff/issues/15858
