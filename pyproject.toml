@@ -19,7 +19,6 @@ dev = [
 link-mode = "hardlink"
 exclude-newer = "7 days"
 python-preference = "only-managed"
-torch-backend = "auto"
 exclude-dependencies = [
     "torch",
     "torchvision",
@@ -85,3 +84,9 @@ ignore = [
 # https://github.com/astral-sh/ruff/issues/15858
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
+
+[tool.pyright]
+reportUnusedCallResult = "none"
+
+# https://github.com/DetachHead/basedpyright/issues/868
+reportUnsafeMultipleInheritance = "none"
