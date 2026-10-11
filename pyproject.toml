@@ -36,10 +36,10 @@ uv = false
 zensical = false
 
 [tool.uv.workspace]
-exclude = ["**/nvibrant"]
-members = [
-    "code/broken/*",
-    "code/tremeschin/*",
+members = ["code/*/*"]
+exclude = [
+    "code/archive",
+    "**/nvibrant",
 ]
 
 [tool.uv.sources]
