@@ -1,0 +1,32 @@
+{
+  "folders": [
+    {"name": "Archive",  "path": "code/archive"},
+    {"name": "Broken",   "path": "code/broken"},
+    {"name": "Scholar",  "path": "code/scholar"},
+    {"name": "Personal", "path": "code/tremeschin"},
+    {"name": "Code",     "path": "."},
+  ],
+
+  "extensions": {
+    "recommendations": [
+      "astral-sh.ty",
+      "charliermarsh.ruff",
+      "detachhead.basedpyright",
+      "myriad-dreamin.tinymist",
+      "rust-lang.rust-analyzer",
+      "tamasfe.even-better-toml",
+      "theNestruo.monospace-icons-theme",
+      "usernamehw.errorlens",
+    ],
+  },
+
+  "settings": {
+    "files.exclude": {
+      ".nomedia": true,
+      ".stfolder": true,
+      "**/.cache": true,
+      "**/py.typed": true,
+      "**/site": true,
+    },
+  },
+}
