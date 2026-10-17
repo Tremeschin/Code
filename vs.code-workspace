@@ -4,6 +4,7 @@
     {"name": "Broken",   "path": "code/broken"},
     {"name": "Scholar",  "path": "code/scholar"},
     {"name": "Personal", "path": "code/tremeschin"},
+    {"name": "DotFiles", "path": "code/tremeschin/DotFiles"},
     {"name": "Code",     "path": "."},
   ],
 

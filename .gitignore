@@ -1,10 +1,10 @@
 # Include on .stignore!
-**/*.lock
-**/*.so
+.stfolder
 **/.cache
 **/.nomedia
-**/.stfolder
 **/.venv
+**/*.so
 **/build
 **/open-gpu
 **/target
+uv.lock
