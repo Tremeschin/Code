@@ -57,6 +57,9 @@ shaderflow = {workspace=true}
 smartdirs  = {workspace=true}
 turbopipe  = {workspace=true}
 
+[tool.ty.environment]
+root = ["."]
+
 # ------------------------------------ #
 # Virtual package
 
