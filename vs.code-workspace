@@ -25,6 +25,7 @@
     "files.exclude": {
       ".nomedia": true,
       ".stfolder": true,
+      ".stignore": true,
       "**/.cache": true,
       "**/py.typed": true,
       "**/site": true,

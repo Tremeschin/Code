@@ -34,7 +34,6 @@ sequence = [
 ]
 
 [tool.uv.exclude-newer-package]
-uv = false
 zensical = false
 
 # ------------------------------------ #
@@ -57,9 +56,6 @@ shaderflow = {workspace=true}
 smartdirs  = {workspace=true}
 turbopipe  = {workspace=true}
 
-[tool.ty.environment]
-root = ["."]
-
 # ------------------------------------ #
 # Virtual package
 
@@ -81,6 +77,7 @@ exclude = ["*"]
 
 [tool.ruff.lint]
 ignore = [
+    "B008", # Namespace bloat for lazylock args
     "E402", # Late/runtime imports are ok for torch
     "E701", # Sometimes looks better than new line
     "E731", # Lambdas can be more readable at times
@@ -89,8 +86,14 @@ ignore = [
     "F405", # You can find star objects why complain
     "F541", # Useful to keep multi-line indentation
     "SIM102", # Splitting long nested conditionals
-    "B008", # Namespace bloat for lazylock args
+    "SIM117", # Unreadable nested contexts
 ]
+
+# ------------------------------------ #
+# Type checking
+
+[tool.ty.environment]
+root = ["."]
 
 # https://github.com/astral-sh/ruff/issues/15858
 [tool.ruff.lint.per-file-ignores]
