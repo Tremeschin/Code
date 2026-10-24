@@ -10,9 +10,8 @@
 
   "extensions": {
     "recommendations": [
-      "astral-sh.ty",
       "charliermarsh.ruff",
-      "detachhead.basedpyright",
+      "meta.pyrefly",
       "myriad-dreamin.tinymist",
       "rust-lang.rust-analyzer",
       "tamasfe.even-better-toml",

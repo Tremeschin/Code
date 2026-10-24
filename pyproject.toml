@@ -7,7 +7,6 @@ dependencies = []
 
 [dependency-groups]
 dev = [
-    "hatchling",
     "poethepoet",
     "pytest-sugar",
     "pytest",
@@ -94,6 +93,9 @@ ignore = [
 
 [tool.ty.environment]
 root = ["."]
+
+[tool.pyrefly]
+python-interpreter-path = ".venv/bin/python"
 
 # https://github.com/astral-sh/ruff/issues/15858
 [tool.ruff.lint.per-file-ignores]

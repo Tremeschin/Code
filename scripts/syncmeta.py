@@ -1,7 +1,6 @@
 import functools
 import re
 import subprocess
-import sys
 import tomllib
 from pathlib import Path
 
@@ -27,7 +26,7 @@ class Workspace(BaseModel):
 
 # Get all projects directories
 workspace = Workspace.model_validate_json(subprocess.check_output((
-    sys.executable, "-m", "uv", "workspace", "metadata",
+    "uv", "workspace", "metadata",
     "--preview-features", "workspace-metadata"
 )).decode())
 
