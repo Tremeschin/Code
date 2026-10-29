@@ -25,6 +25,7 @@ exclude-dependencies = [
     "torch",
     "torchvision",
     "torchaudio",
+    "tdewolff-minify"
 ]
 
 [tool.poe.tasks.sync]
